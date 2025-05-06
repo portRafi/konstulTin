@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KonsulMed - Konsultasi Kesehatan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            animation: {
+              slide: 'slide 9s ease-in-out infinite'
+            },
+            keyframes: {
+              slide: {
+                '0%, 100%': { transform: 'translateX(0%)' },
+                '33.33%': { transform: 'translateX(-100%)' },
+                '66.66%': { transform: 'translateX(-200%)' }
+              }
+            }
+          }
+        }
+      };
+    </script> 
+
+      <style>
+        .slider-container {
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+        }
+      
+        .slider-track {
+          display: flex;
+          width: 300%;
+          animation: slide 9s infinite;
+        }
+      
+        .slide {
+          width: 100%;
+          flex-shrink: 0;
+        }
+      
+        @keyframes slide {
+          0% {
+            transform: translateX(0%);
+          }
+          77.77% {
+            transform: translateX(-100%);
+          }
+          88.88% {
+            transform: translateX(-200%);
+          }
+          100.100% {
+            transform: translateX(0%);
+          }
+        }
+      </style>
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />   
+
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <img src="assets/image.png" alt="Logo" class="h-10 w-10 rounded-full" />
+          <h1 class="text-2xl font-semibold">KonsulTin</h1>
+        </div>
+        <nav class="space-x-6 hidden md:flex">
+          <a href="#" class="hover:text-blue-600">Beranda</a>
+          <a href="#layanan" class="hover:text-blue-600">Layanan</a>
+          <a href="#dokter" class="hover:text-blue-600">Dokter</a>
+          <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
+          <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-700 text-sm px-3 py-2 rounded hover:shadow">
+            🌙 / ☀️
+          </button>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+            Masuk
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-100 via-blue-50 to-white py-20 dark:from-blue-900 dark:via-blue-800 dark:to-gray-900">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="slide px-4">
+              <h2 class="text-4xl font-bold mb-4 leading-tight">Konsultasi Kesehatan Mudah & Cepat</h2>
+              <p class="mb-6 text-gray-700 dark:text-gray-300">Temui dokter terpercaya secara online tanpa harus antre. Layanan 24 jam tersedia untuk Anda.</p>
+              <a href="#layanan" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Mulai Konsultasi</a>
+            </div>
+            <div class="slide px-4">
+              <h2 class="text-4xl font-bold mb-4 leading-tight">Dokter Siap Melayani Kapan Saja</h2>
+              <p class="mb-6 text-gray-700 dark:text-gray-300">Kami hadir 24/7 untuk memenuhi kebutuhan kesehatan Anda tanpa batasan waktu.</p>
+              <a href="#layanan" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Temui Dokter</a>
+            </div>
+            <div class="slide px-4">
+              <h2 class="text-4xl font-bold mb-4 leading-tight">Akses Kesehatan Dalam Genggaman</h2>
+              <p class="mb-6 text-gray-700 dark:text-gray-300">Gunakan ponsel atau komputer Anda untuk berkonsultasi kapan saja di mana saja.</p>
+              <a href="#layanan" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Coba Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="assets/image2.png" alt="Konsultasi Ilustrasi" class="rounded-xl shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Layanan Section -->
+    <section id="layanan" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-8">Layanan Kami</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 bg-blue-100 rounded-lg">
+            <h4 class="text-xl font-semibold mb-2">Chat Dokter</h4>
+            <p>Konsultasi cepat dan mudah melalui chat.</p>
+          </div>
+          <div class="p-6 bg-blue-100 rounded-lg">
+            <h4 class="text-xl font-semibold mb-2">Reservasi Online</h4>
+            <p>Pesan jadwal konsultasi dengan dokter pilihan Anda.</p>
+          </div>
+          <div class="p-6 bg-blue-100 rounded-lg">
+            <h4 class="text-xl font-semibold mb-2">Rekam Medis</h4>
+            <p>Kelola dan lihat riwayat kesehatan Anda secara online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dokter Section -->
+    <section id="dokter" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-8">Dokter Terpercaya</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/dokter1.jpg" alt="Dr. A" class="rounded-full mx-auto mb-4" />
+            <h4 class="font-semibold">Dr. Andi Saputra</h4>
+            <p class="text-sm text-gray-600">Spesialis Penyakit Dalam</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/dokter2.jpg" alt="Dr. B" class="rounded-full mx-auto mb-4" />
+            <h4 class="font-semibold">Dr. Bella Kartika</h4>
+            <p class="text-sm text-gray-600">Dokter Umum</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="assets/dokter3.jpg" alt="Dr. C" class="rounded-full mx-auto mb-4" />
+            <h4 class="font-semibold">Dr. Candra Wijaya</h4>
+            <p class="text-sm text-gray-600">Spesialis Anak</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="py-20 bg-white dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Mereka</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow hover:scale-105 hover:shadow-xl transition duration-300">
+            <p class="text-gray-700 dark:text-gray-300 italic mb-4">“Pelayanan sangat cepat, dan saya bisa konsultasi tanpa keluar rumah. Sangat membantu!”</p>
+            <div class="flex items-center space-x-4">
+              <img src="assets/testi3.jpg" alt="User 1" class="rounded-full w-8 h-8 object-cover mr-4" />
+              <div>
+                <p class="font-semibold">Ayu Rahmawati</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Ibu Rumah Tangga</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow hover:scale-105 hover:shadow-xl transition duration-300">
+            <p class="text-gray-700 dark:text-gray-300 italic mb-4">“Dokternya ramah dan sangat profesional. Saya merasa sangat diperhatikan.”</p>
+            <div class="flex items-center space-x-4">
+              <img src="assets/testi2.jpg" alt="User 2" class="rounded-full w-8 h-8 object-cover mr-4  " />
+              <div>
+                <p class="font-semibold">Budi Santoso</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Karyawan Swasta</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 dark:bg-gray-700 p-6 rounded-lg shadow hover:scale-105 hover:shadow-xl transition duration-300">
+            <p class="text-gray-700 dark:text-gray-300 italic mb-4">“Fitur video call sangat membantu dalam menjelaskan keluhan saya ke dokter.”</p>
+            <div class="flex items-center space-x-4">
+              <img src="assets/testi3.jpg" alt="User 3" class="rounded-full w-8 h-8 object-cover mr-4" />
+              <div>
+                <p class="font-semibold">Dina Lestari</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Mahasiswa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Sekunder -->
+    <section class="py-20 bg-blue-600 dark:bg-blue-800 text-white text-center">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-4">Siap untuk konsultasi pertama Anda?</h2>
+        <p class="mb-6 text-lg">Bergabunglah dengan ribuan orang yang telah merasakan kemudahan layanan kami.</p>
+        <a href="#" class="inline-block bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">Daftar Sekarang</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white py-8">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+        <div>
+          <h4 class="font-semibold text-lg mb-2">KonsulTin</h4>
+          <p>Platform konsultasi kesehatan online terpercaya.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-2">Navigasi</h4>
+          <ul>
+            <li><a href="#" class="hover:underline">Beranda</a></li>
+            <li><a href="#layanan" class="hover:underline">Layanan</a></li> 
+            <li><a href="#dokter" class="hover:underline">Dokter</a></li>
+            <li><a href="#testimoni" class="hover:underline">Testimoni</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-lg mb-2">Kontak Kami</h4>
+          <p>Email: srafi359@gmail.com</p>
+          <p>Telepon: (+62) 08212565969</p>
+        </div>
+      </div>
+      <div class="text-center mt-8 text-sm text-gray-400">&copy; 2025 KonsulTin. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
