@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5c5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous" />
     <script>
+
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+  
       tailwind.config = {
         darkMode: 'class',
         theme: {
@@ -75,13 +81,24 @@
           <img src="assets/image.png" alt="Logo" class="h-10 w-10 rounded-full" />
           <h1 class="text-2xl font-semibold">KonsulTin</h1>
         </div>
-        <nav class="space-x-6 hidden md:flex">
-          <a href="#" class="hover:text-blue-600">Beranda</a>
-          <a href="#layanan" class="hover:text-blue-600">Layanan</a>
-          <a href="#dokter" class="hover:text-blue-600">Dokter</a>
-          <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
-          <a href="#kontak" class="hover:text-blue-600">Kontak</a>
-        </nav>
+        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+          <div class="bg-white dark:bg-gray-800 w-64 h-full p-6 shadow-lg">
+            <!-- Mobile Toggle -->
+                <button class="md:hidden" onclick="toggleMenu()">
+                  ☰
+                </button>
+
+                <!-- Desktop Nav -->
+                <nav class="space-x-6 hidden md:flex">
+
+              <a href="#" class="hover:text-blue-600">Beranda</a>
+              <a href="#layanan" class="hover:text-blue-600">Layanan</a>
+              <a href="#dokter" class="hover:text-blue-600">Dokter</a>
+              <a href="#testimoni" class="hover:text-blue-600">Testimoni</a>
+              <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+            </nav>
+          </div>
+        </div>
         <div class="flex items-center space-x-4">
           <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-700 text-sm px-3 py-2 rounded hover:shadow">
             🌙 / ☀️
